@@ -4,4 +4,4 @@ The idea of this project was to create the classic game "Memotest" using Javascr
 
 You can try it from this url:
 
-# https://natiguida.github.io/memotest/
+https://natiguida.github.io/memotest/
