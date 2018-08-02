@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memotest</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="jugador">
+		<label for=""><b class="memo">Memotest</b></label>Hola👋🏻! Vamos a jugar al Memotest</br>Pero antes de empezar...</br>Cual es tu nombre❓</label><input id="su-nombre" type="text" placeholder="Natalia">
+		<label for=""></label>Con que dificultad te gustaria jugar?</label>
+		<button id="facil" class="botones comenzar">FACIL</button>
+		<button id="intermedio" class="botones comenzar">INTERMEDIO</button>
+		<button id="experto" class="botones comenzar">EXPERTO</button>
+		<label id="requerido" class="none"><b>UPSS...</b>El nombre es requerido.</label>
+	</section>
+		<section id="juego" class="juego none">
+			<section class="texto">
+				<p><b class="memo">Memotest</b></p>
+				<span id="nombre"> 	<span>Hola </span></span>
+				<p>Encontra todos los pares en menos de <span><b class="intentos-juego"></b></span> intentos</p>
+				<span>Nivel</span><p class="dificultad"> </p>
+			</section>
+			<section class="container-img">
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-uno"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-dos"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-tres"></div>	
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-cuatro"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-cinco"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-seis"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-siete"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-ocho"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-nueve"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-diez"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-once"></div>
+				<div class="div-img rotar"><img src="img/tapada.jpg" alt="" data-destapada="" id="img-doce"></div>
+			</section>
+			<div class="container-intentos">
+		   	<b><p>Intentos: <span class="intentos"></span></p></b>
+		  </div>
+		</section>
+		<div class="perdiste none" id="perdiste">
+			<p>Perdiste 😓 con <span class="intentos"></span> intentos.</br>Pero podes volver a intentarlo</p>
+			<button class="botones reiniciar">VOLVER A INTENTAR</button>
+			<div class="resultados">			
+				<div class="nombre-guardado"><span>NOMBRE</span></div>
+				<div class="dificultad-guardado"><span>NIVEL</span></div>
+				<div class="intentos-guardado"><span>INTENTOS</span></div>
+			</div>
+		</div>
+		<div class="ganaste none" id="ganaste">
+			<p>GANASTE🎉! con <span class="intentos"></span> intentos.</br>Ya podes volver a jugar</p>
+			<button class="botones reiniciar">VOLVER A JUGAR</button>
+			<div class="resultados">			
+				<div class="nombre-guardado"><span>NOMBRE</span></div>
+				<div class="dificultad-guardado"><span>NIVEL</span></div>
+				<div class="intentos-guardado"><span>INTENTOS</span></div>
+			</div>
+		</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
