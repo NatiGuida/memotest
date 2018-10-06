@@ -56,7 +56,7 @@ $("#intermedio").on("click", function () {
 });
 
 $("#experto").on("click", function () {
-  maxIntentos = 2;
+  maxIntentos = 9;
   var dificultad = "DIFICIL";
   $(".intentos-juego").append(maxIntentos);
   $(".dificultad").append(dificultad);
@@ -130,7 +130,7 @@ $("img").on("click", function () {
         cont++;
         intentos++;
         $(".intentos").html(intentos)
-        
+
       }
     }
   }
@@ -156,13 +156,15 @@ $(".reiniciar").on("click", function () {
 
 function leerDatos() {
   var datosGuardados = JSON.parse(localStorage.getItem("info"));
-  for (var i = 0; i < datosGuardados.info.length; i++) {
-    var nombreG = "<p>" + datosGuardados.info[i].nombre + "</p>";
-    var dificultadG = "<p>" + datosGuardados.info[i].dificultad + "</p>";
-    var intentosG = "<p>" + datosGuardados.info[i].intentos + "</p>";
-    $(".nombre-guardado").append(nombreG);
-    $(".dificultad-guardado").append(dificultadG);
-    $(".intentos-guardado").append(intentosG);
+  if (datosGuardados) {
+    for (var i = 0; i < datosGuardados.info.length; i++) {
+      var nombreG = "<p>" + datosGuardados.info[i].nombre + "</p>";
+      var dificultadG = "<p>" + datosGuardados.info[i].dificultad + "</p>";
+      var intentosG = "<p>" + datosGuardados.info[i].intentos + "</p>";
+      $(".nombre-guardado").append(nombreG);
+      $(".dificultad-guardado").append(dificultadG);
+      $(".intentos-guardado").append(intentosG);
+    }
   }
 }
 
@@ -193,6 +195,7 @@ function guardarDatos() {
     total: infoOrdenado.length
   };
 
+  console.log(123)
   let dataStr = JSON.stringify(jsonInfo);
   localStorage.setItem("info", dataStr);
 }
